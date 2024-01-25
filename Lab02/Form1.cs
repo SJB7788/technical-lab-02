@@ -18,6 +18,9 @@ namespace Lab02
         private int historyListIndex = 0;
         private string calcText;
         private float calcTextAsNum;
+        // store operation result in a seperate variable
+        private float calcOperationResult = 0;
+        private string operationQueue;
 
         public Form1()
         {
@@ -79,6 +82,7 @@ namespace Lab02
             calcOnButton.Text = calcStatus ? "Off" : "On";
             calcText = "0";
             calcTextAsNum = 0;
+            calcOperationResult = 0;
             calcValue.Text = calcText;
         }
 
@@ -112,31 +116,42 @@ namespace Lab02
         // think about it carefully ty
         private void doOperation(string operation)
         {
+            calcHistoryList.Add(calcTextAsNum);
             if (historyListIndex == 0)
             {
-                calcHistoryList.Add(calcTextAsNum);
                 calcText = "0";
                 calcTextAsNum = 0;
                 historyListIndex++;
             }
             else
             {
-                calcHistoryList.Add(calcTextAsNum);
                 float operandOne = (float)calcHistoryList[0];
                 float operandTwo = (float)calcHistoryList[1];
-                switch (operation) 
+                switch (operationQueue)
                 {
                     case "add":
-                        calcTextAsNum = operandOne + operandTwo;
-                        calcHistoryList.Add(calcTextAsNum);
-                        calcText = calcTextAsNum.ToString();
+                        calcOperationResult = operandOne + operandTwo;
+                        break;
+                    case "subtract":
+                        calcOperationResult = operandOne - operandTwo;
+                        break;
+                    case "multiply":
+                        calcOperationResult = operandOne * operandTwo;
+                        break;
+                    case "divide":
+                        calcOperationResult = operandOne / operandTwo;
                         break;
                 }
+
+                calcHistoryList.Add(calcOperationResult);
+                calcValue.Text = calcOperationResult.ToString();
+                calcTextAsNum = 0;
+                calcText = "0";
+
                 calcHistoryList.Remove(operandOne);
                 calcHistoryList.Remove(operandTwo);
-                historyListIndex--;
             }
-            Console.WriteLine(calcHistoryList[0]);
+            operationQueue = operation;
         }
 
         private void buttonZero_Click(object sender, EventArgs e)
@@ -206,6 +221,21 @@ namespace Lab02
         private void addButton_Click(object sender, EventArgs e)
         {
             doOperation("add");
+        }
+
+        private void subtractButton_Click(object sender, EventArgs e)
+        {
+            doOperation("subtract");
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            doOperation("multiply");
+        }
+
+        private void divideButton_Click(object sender, EventArgs e)
+        {
+            doOperation("divide");
         }
     }
 }

@@ -8,3 +8,13 @@ C:\Users\SJB\source\repos\Lab02\Lab02\obj\Debug\Lab02.csproj.GenerateResource.ca
 C:\Users\SJB\source\repos\Lab02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
 C:\Users\SJB\source\repos\Lab02\Lab02\obj\Debug\Lab02.exe
 C:\Users\SJB\source\repos\Lab02\Lab02\obj\Debug\Lab02.pdb
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\bin\Debug\Lab02.exe.config
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\bin\Debug\Lab02.exe
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\bin\Debug\Lab02.pdb
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.Form1.resources
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.Properties.Resources.resources
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.csproj.GenerateResource.cache
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.exe
+C:\Users\sbj77\Documents\GitHub\technical-lab-02\Lab02\obj\Debug\Lab02.pdb
